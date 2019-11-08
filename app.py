@@ -6,7 +6,7 @@ import time
 const token = S3Connection(os.environ.['TOKEN'])
 
 while True:
-    vk = vk_api.VkApi(token = Token, scope = 'messages')
+    vk = vk_api.VkApi(token = token, scope = 'messages')
     delta = datetime.timedelta(hours = 6, minutes = 0)
     t = (datetime.datetime.now(datetime.timezone.utc) + delta)
 
