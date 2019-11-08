@@ -1,10 +1,9 @@
 import os,sys
-from boto.s3.connection import S3Connection
 import vk_api
 import datetime
 import time
 
-const token = S3Connection(os.environ['TOKEN'])
+const token = os.environ['TOKEN']
 
 while True:
     vk = vk_api.VkApi(token = token, scope = 'messages')
