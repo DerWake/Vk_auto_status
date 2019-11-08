@@ -2,8 +2,10 @@ import vk_api
 import datetime
 import time
 
+Token = process.env.TOKEN
+
 while True:
-    vk = vk_api.VkApi(token = process.env.TOKEN, scope = 'messages')
+    vk = vk_api.VkApi(token = Token, scope = 'messages')
     delta = datetime.timedelta(hours = 6, minutes = 0)
     t = (datetime.datetime.now(datetime.timezone.utc) + delta)
 
