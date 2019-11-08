@@ -2,7 +2,7 @@ import vk_api
 import datetime
 import time
 
-const Token = process.env.TOKEN
+const Token = os.environ.['TOKEN']
 
 while True:
     vk = vk_api.VkApi(token = Token, scope = 'messages')
